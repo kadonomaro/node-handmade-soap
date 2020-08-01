@@ -20,6 +20,7 @@ app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', 'pages')
 app.use(router)
+app.use('/assets', express.static(__dirname + '/assets'))
 
 
 
