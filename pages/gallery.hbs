@@ -144,89 +144,10 @@
         </section>
 
 
-        <section class="subscribe">
-            <div class="subscribe__inner">
-            <div class="subscribe__background background"></div>
-
-                <div class="subscribe__col">
-                    <h2 class="subscribe__title">Подписаться на рассылку</h2>
-                    <span class="subscribe__subtitle">Для получения новостей о мыле ручной работы</span>
-                </div>
-
-                <div class="subscribe__col">
-                    <form action="" method="POST" class="subscribe__form">
-                        <label class="subscribe__label" aria-label="input email">
-                            <input class="subscribe__input js-subscribe-email" type="email" name="subscribe-email" placeholder="адрес электронной почты" required novalidate>
-                        </label>
-                        <button class="subscribe__button button js-subscribe-button" data-target="modal-thanks">Подписаться</button>
-                        <span class="subscribe__info js-subscribe-invalid"></span>
-                    </form>
-                </div>
-
-            </div>
-        </section>
+        {{> subscribe }}
 
 
-        <footer class="footer" id="footer">
-            <div class="footer__background background"></div>
-            <div class="container">
-                <div class="footer__inner">
-
-                    <div class="footer__col">
-                        <div class="social">
-                            <ul class="social__list">
-                                <li class="social__item">
-                                    <a class="social__link social__link--one" href="https://www.instagram.com/?hl=ru" title="Мы в Instagram" target="_blank" rel="noopener noreferrer"></a>
-                                </li>
-                                <li class="social__item">
-                                    <a class="social__link social__link--two" href="https://vk.com/" target="_blank" title="Мы Вконтакте" rel="noopener noreferrer"></a>
-                                </li>
-                                <li class="social__item">
-                                    <a class="social__link social__link--three" href="https://github.com/kadonomaro" title="Разработка сайта" target="_blank" rel="noopener noreferrer"></a>
-                                </li>
-                            </ul>
-                        </div><!--social-->
-                    </div>
-
-                    <div class="footer__col">
-                        <div class="contacts">
-                            <ul class="contacts__list">
-                                <li class="contacts__item">
-                                    <a href="tel:88008000000" class="contacts__link contacts__link--phone">8 800 800 00 00</a>
-                                </li>
-                                <li class="contacts__item">
-                                    <a href="mailto:info@handmade-soap.ru" class="contacts__link contacts__link--mail">info@handmade-soap.ru</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="footer__col">
-                        <div class="footer-links">
-                            <ul class="footer-links__list">
-                                <li class="footer-links__item">
-                                    <a href="index.html" class="footer-links__link">На главную</a>
-                                </li>
-                                <li class="footer-links__item">
-                                    <a href="blog.html" class="footer-links__link">Творческая мастерская</a>
-                                </li>
-                                <li class="footer-links__item">
-                                    <a href="gallery.html" class="footer-links__link">Галерея</a>
-                                </li>
-                                <li class="footer-links__item">
-                                    <a href="faq.html" class="footer-links__link">FAQ</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                </div><!--footer inner-->
-                <div class="footer__bottom">
-                    2019 © handmade-soap.ru
-                </div>
-            </div><!--container-->
-        </footer>
+        {{> footer }}
 
 
         <div class="modal-overlay">
