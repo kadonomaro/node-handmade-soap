@@ -15,7 +15,16 @@ const getBlogPage = async (request, response) => {
 }
 
 
+const getGalleryPage = async (request, response) => {
+	response.render('gallery', {
+		title: 'Галерея работ – мыло ручной работы на сайте Handmade soap',
+		scriptUrl: './assets/js/gallery.js'
+	})
+}
+
+
 module.exports = {
 	getIndexPage,
-	getBlogPage
+	getBlogPage,
+	getGalleryPage
 }

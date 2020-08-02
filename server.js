@@ -2,7 +2,7 @@ const express = require('express')
 const { Router } = require('express')
 const router = Router()
 const handlebars = require('express-handlebars')
-const { getIndexPage, getBlogPage } = require('./controllers/pages.controller')
+const { getIndexPage, getBlogPage, getGalleryPage } = require('./controllers/pages.controller')
 
 const PORT = process.env.PORT || 3000
 
@@ -15,6 +15,7 @@ const hbs = handlebars.create({
 router
 	.get('/', getIndexPage)
 	.get('/blog', getBlogPage)
+	.get('/gallery', getGalleryPage)
 
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
