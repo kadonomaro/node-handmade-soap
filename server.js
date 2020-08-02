@@ -23,6 +23,11 @@ app.set('view engine', 'hbs')
 app.set('views', 'pages')
 app.use(router)
 app.use('/assets', express.static(__dirname + '/assets'))
+app.use(function (req, res) {
+	res.render('404', {
+		title: 'Страница не найдена – Handmade soap'
+	});
+});
 
 
 
@@ -34,3 +39,4 @@ function start() {
 }
 
 start()
+

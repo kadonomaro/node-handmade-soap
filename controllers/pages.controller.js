@@ -29,7 +29,6 @@ const getFaqPage = async (request, response) => {
 }
 
 
-
 module.exports = {
 	getIndexPage,
 	getBlogPage,
