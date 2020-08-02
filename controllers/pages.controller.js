@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 const getIndexPage = async (request, response) => {
 	response.render('index', {
 		title: 'Мыло ручной работы на сайте Handmade soap',
