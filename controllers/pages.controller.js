@@ -1,4 +1,4 @@
-const getIndexPage = async (request, response) => {
+const getIndex = async (request, response) => {
 	response.render('index', {
 		title: 'Мыло ручной работы на сайте Handmade soap',
 		description: 'Мыло ручной работы, откройте для себя мир мыловарения. Как сделать мыло своими руками и другие секреты на сайте Handmade soap',
@@ -7,7 +7,7 @@ const getIndexPage = async (request, response) => {
 	})
 }
 
-const getBlogPage = async (request, response) => {
+const getBlog = async (request, response) => {
 	response.render('blog', {
 		title: 'Творческая мастерская – мыло ручной работы на сайте Handmade soap',
 		description: 'Мыло ручной работы, мыловарение. Как самому можно сделать мыло своими руками, пошаговая инструкция в нашей творческой мастерской на сайте Handmade soap',
@@ -16,7 +16,7 @@ const getBlogPage = async (request, response) => {
 	})
 }
 
-const getGalleryPage = async (request, response) => {
+const getGallery = async (request, response) => {
 	response.render('gallery', {
 		title: 'Галерея работ – мыло ручной работы на сайте Handmade soap',
 		description: 'Мыло ручной работы, мыловарение. Фотогалерея мыла ручной работы на сайте Handmade soap',
@@ -25,7 +25,7 @@ const getGalleryPage = async (request, response) => {
 	})
 }
 
-const getFaqPage = async (request, response) => {
+const getFaq = async (request, response) => {
 	response.render('faq', {
 		title: 'Часто задаваемые вопросы – мыло ручной работы на сайте Handmade soap',
 		description: 'Ответы на все вопросы, которые могут возникнуть у начинающего мыловара. Часто задаваемые вопросы на сайте Handmade soap',
@@ -36,8 +36,8 @@ const getFaqPage = async (request, response) => {
 
 
 module.exports = {
-	getIndexPage,
-	getBlogPage,
-	getGalleryPage,
-	getFaqPage
+	getIndex,
+	getBlog,
+	getGallery,
+	getFaq
 }
