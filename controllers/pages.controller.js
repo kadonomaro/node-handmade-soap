@@ -29,12 +29,12 @@ const getGallery = async (request, response) => {
 
 const getFaq = async (request, response) => {
 	const faqItems = await Faq.find({})
-	console.log(faqItems)
 	response.render('faq', {
 		title: 'Часто задаваемые вопросы – мыло ручной работы на сайте Handmade soap',
 		description: 'Ответы на все вопросы, которые могут возникнуть у начинающего мыловара. Часто задаваемые вопросы на сайте Handmade soap',
 		scriptUrl: './assets/js/faq.js',
-		faq: true
+		faq: true,
+		faqItems
 	})
 }
 
