@@ -15,8 +15,8 @@
     "nodemon": "^2.0.4"
   },
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "start": "node ./dist/server.js",
+    "dev": "nodemon ./dist/server.js",
     "ts": "tsc"
   },
   "keywords": [
