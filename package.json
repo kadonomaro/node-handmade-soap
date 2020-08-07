@@ -4,17 +4,20 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "@types/express": "^4.17.7",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
-    "mongoose": "^5.9.26"
+    "mongoose": "^5.9.26",
+    "typescript": "^3.9.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "ts": "tsc"
   },
   "keywords": [
     "node",
