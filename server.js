@@ -1,5 +1,4 @@
 const express = require('express')
-import { Request, Response } from 'express'
 const mongoose = require('mongoose')
 require('dotenv').config()
 const { Router } = require('express')
@@ -23,13 +22,11 @@ router
 	.get('/faq', pagesController.getFaq)
 
 app.engine('hbs', hbs.engine)
-
 app.set('view engine', 'hbs')
 app.set('views', 'pages')
-
 app.use(router)
-app.use(express.static(__dirname + '/assets'))
-app.use(function (req: Request, res: Response) {
+app.use('/assets', express.static(__dirname + '/assets'))
+app.use(function (req, res) {
 	res.render('404', {
 		title: 'Страница не найдена – Handmade soap'
 	})
