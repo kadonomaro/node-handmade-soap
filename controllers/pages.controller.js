@@ -1,4 +1,5 @@
-const Faq = require('../shemas/faq.shema')
+const Faq = require('../models/faq.model')
+const Article = require('../models/article.model')
 
 const getIndex = async (request, response) => {
 	response.render('index', {
@@ -10,11 +11,13 @@ const getIndex = async (request, response) => {
 }
 
 const getBlog = async (request, response) => {
+	const articles = await Article.find({})
 	response.render('blog', {
 		title: 'Творческая мастерская – мыло ручной работы на сайте Handmade soap',
 		description: 'Мыло ручной работы, мыловарение. Как самому можно сделать мыло своими руками, пошаговая инструкция в нашей творческой мастерской на сайте Handmade soap',
 		scriptUrl: './assets/js/blog.js',
-		blog: true
+		blog: true,
+		articles
 	})
 }
 
