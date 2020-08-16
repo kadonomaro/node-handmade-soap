@@ -20,6 +20,7 @@
             <path class="navigation__toggle-bot" d="M13 33.0357C13 32.4698 13.4695 32.0168 14.035 32.037L27 32.5L39.965 32.037C40.5305 32.0168 41 32.4698 41 33.0357V33.0357C41 33.5737 40.574 34.0152 40.0363 34.0344L27 34.5L13.9637 34.0344C13.426 34.0152 13 33.5737 13 33.0357V33.0357Z" fill="#BDA4E0"/>
         </svg>
     </button>
+
     <ul class="navigation__list">
         <li class="navigation__item">
             <a href="/" class="navigation__link">На главную</a>
@@ -28,12 +29,11 @@
             <a href="/blog" class="navigation__link">Статьи</a>
             <nav class="navigation__dropdown navigation-dropdown">
                 <ul class="navigation-dropdown__list">
-                    <li class="navigation-dropdown__item">
-                        <a href="/blog#article-1" class="navigation-dropdown__link">Как создаются шедевры</a>
-                    </li>
-                    <li class="navigation-dropdown__item">
-                        <a href="/blog#article-2" class="navigation-dropdown__link">Приступаем к работе</a>
-                    </li>
+                    {{#each articles}}
+                        <li class="navigation-dropdown__item">
+                            <a href="/blog#article-{{@index}}" class="navigation-dropdown__link">{{#each this}}{{title}}{{/each}}</a>
+                        </li>
+                    {{/each}}
                 </ul>
             </nav>
         </li>
